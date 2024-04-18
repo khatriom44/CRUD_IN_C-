@@ -12,27 +12,27 @@ namespace Crud
         //ADD Employee
         public void AddEmployee()
         {
+            Employee oData = new Employee();
             try
             {
                 Console.WriteLine("Employee ID:");
-                int iEmployeeId = Convert.ToInt32(Console.ReadLine());
+                oData.iId = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Employee Name:");
-                string sEmployeeName = Console.ReadLine();
+                oData.sName = Console.ReadLine();
                 Console.WriteLine("Employee Age:");
-                int iEmployeeAge = Convert.ToInt32(Console.ReadLine());
+                oData.iAge = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Employee Gender(m(Male)/f(Female):");
-                char cEmployeeGender = Convert.ToChar(Console.ReadLine());
+                oData.cGender = Convert.ToChar(Console.ReadLine());
                 Console.WriteLine("Employee 10th Percentage:");
-                float fEmployeePercentageTenth = float.Parse(Console.ReadLine());
+                oData.fPercentageTenth = float.Parse(Console.ReadLine());
                 Console.WriteLine("Employee 12th Percenatge:");
-                double dEmployeePercenatge = (double)Convert.ToDecimal(Console.ReadLine());
+                oData.dPercentage = (double)Convert.ToDecimal(Console.ReadLine());
                 Console.WriteLine("Is Employee?(true/False):");
-                bool bIsEmployee = Convert.ToBoolean(Console.ReadLine());
+                oData.bIsEmployed = Convert.ToBoolean(Console.ReadLine());
                 Console.WriteLine("Employee Salary:");
-                long lemployeeSalary = long.Parse(Console.ReadLine());
+                oData.lSalary = long.Parse(Console.ReadLine());
 
-                Employee Data = new Employee(iEmployeeId, sEmployeeName, iEmployeeAge, cEmployeeGender, fEmployeePercentageTenth, dEmployeePercenatge, bIsEmployee, lemployeeSalary);
-                Employee.Add(Data);
+                Employee.Add(oData);
                 Console.WriteLine("Employee Detail added successfully.");
             }
             catch (Exception ex)
@@ -73,32 +73,39 @@ namespace Crud
                 //string sOldEmployee = Console.ReadLine();
                 //int iIndex = Employee.FindIndex(Employee => Employee == sOldEmployee);
 
-                int iIndex = Convert.ToInt32(Console.ReadLine()) - 1;
+                int iIndex = Convert.ToInt32(Console.ReadLine());
 
-                if (iIndex >= 1 && iIndex < Employee.Count)
+                if (iIndex >= 1 && iIndex <= Employee.Count)
                 {
-                    Console.WriteLine("Employee ID:");
-                    int iEmployeeId = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Employee Name:");
-                    string sEmployeeName = Console.ReadLine();
-                    Console.WriteLine("Employee Age:");
-                    int iEmployeeAge = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Employee Gender(m(Male)/f(Female):");
-                    char cEmployeeGender = Convert.ToChar(Console.ReadLine());
-                    Console.WriteLine("Employee 10th Percentage:");
-                    float fEmployeePercentageTenth = float.Parse(Console.ReadLine());
-                    Console.WriteLine("Employee 12th Percenatge:");
-                    double dEmployeePercenatge = (double)Convert.ToDecimal(Console.ReadLine());
-                    Console.WriteLine("Is Employee?(true/False):");
-                    bool bIsEmployee = Convert.ToBoolean(Console.ReadLine());
-                    Console.WriteLine("Employee Salary:");
-                    long lemployeeSalary = long.Parse(Console.ReadLine());
+                    try
+                    {
+                        Employee oData = new Employee();
+                        Console.WriteLine("Employee ID:");
+                        oData.iId = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Employee Name:");
+                        oData.sName = Console.ReadLine();
+                        Console.WriteLine("Employee Age:");
+                        oData.iAge = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Employee Gender(m(Male)/f(Female):");
+                        oData.cGender = Convert.ToChar(Console.ReadLine());
+                        Console.WriteLine("Employee 10th Percentage:");
+                        oData.fPercentageTenth = float.Parse(Console.ReadLine());
+                        Console.WriteLine("Employee 12th Percenatge:");
+                        oData.dPercentage = (double)Convert.ToDecimal(Console.ReadLine());
+                        Console.WriteLine("Is Employee?(true/False):");
+                        oData.bIsEmployed = Convert.ToBoolean(Console.ReadLine());
+                        Console.WriteLine("Employee Salary:");
+                        oData.lSalary = long.Parse(Console.ReadLine());
 
-                    Employee Data = new Employee(iEmployeeId, sEmployeeName, iEmployeeAge, cEmployeeGender, fEmployeePercentageTenth, dEmployeePercenatge, bIsEmployee, lemployeeSalary);
 
-                    Employee[iIndex] = Data;
+                        Employee[iIndex - 1] = oData;
 
-                    Console.WriteLine("Employee Detail Updated Successfully.");
+                        Console.WriteLine("Employee Detail Updated Successfully.");
+                    }
+                    catch(Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);  
+                    }
                 }
                 else
                 {

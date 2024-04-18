@@ -25,17 +25,17 @@ namespace Crud
 
         public long lSalary {  get; set; }
 
-        public Employee(int iEmployeeId,string sEmployeeName,int iEmployeeAge,char cEmployeeGender,float fEmployeePercentageTenth,double demployeePercentage,bool bIsEmployee,long lEmployeeSalary )
-        {
-            iId = iEmployeeId;
-            sName = sEmployeeName;
-            iAge = iEmployeeAge;
-            cGender = cEmployeeGender;
-            fPercentageTenth = fEmployeePercentageTenth;
-            dPercentage = demployeePercentage;
-            bIsEmployed = bIsEmployee;
-            lSalary = lEmployeeSalary;
-        }
+        //public Employee(int iEmployeeId,string sEmployeeName,int iEmployeeAge,char cEmployeeGender,float fEmployeePercentageTenth,double demployeePercentage,bool bIsEmployee,long lEmployeeSalary )
+        //{
+        //    iId = iEmployeeId;
+        //    sName = sEmployeeName;
+        //    iAge = iEmployeeAge;
+        //    cGender = cEmployeeGender;
+        //    fPercentageTenth = fEmployeePercentageTenth;
+        //    dPercentage = demployeePercentage;
+        //    bIsEmployed = bIsEmployee;
+        //    lSalary = lEmployeeSalary;
+        //}
 
     }
 }
