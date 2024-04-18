@@ -1,0 +1,7 @@
+C:\Users\sit442\Desktop\CRM\Crud\Crud\bin\Debug\Crud.exe.config
+C:\Users\sit442\Desktop\CRM\Crud\Crud\bin\Debug\Crud.exe
+C:\Users\sit442\Desktop\CRM\Crud\Crud\bin\Debug\Crud.pdb
+C:\Users\sit442\Desktop\CRM\Crud\Crud\obj\Debug\Crud.csproj.AssemblyReference.cache
+C:\Users\sit442\Desktop\CRM\Crud\Crud\obj\Debug\Crud.csproj.CoreCompileInputs.cache
+C:\Users\sit442\Desktop\CRM\Crud\Crud\obj\Debug\Crud.exe
+C:\Users\sit442\Desktop\CRM\Crud\Crud\obj\Debug\Crud.pdb
